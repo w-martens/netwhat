@@ -117,15 +117,18 @@ $hoeveelheid$ $subnets =$ $2 ^ {subnetbits}$
 
 subnetbits zijn de bits die, naast de mask die gedefinieerd is door de class, zijn opzij gezet voor subnets.
 
-ip:|192.|164.|1.|0.
+ip:|192.|168.|1.|0.
 :-|:-|:-|:-|:-|
 mask:|255.|255.|255.|240 (/28)
-||11111111|11111111|11111111|11110000|
+||`11111111`|`11111111`|`11111111`|`11110000`|
+subnetbits:||||`↑↑↑↑`
+hostbits:||||`____↑↑↑↑`    
 
-<img src="a.png" alt="drawing" width="500"/>
+<img src="a.png" alt="drawing" width="400"/>
+<img src="b.png" alt="drawing" width="412"/>
 
->Hoeveel valid hosts?   
-2ˆ(hoeveelheid host bits) - 2 oftewel 2 ^ (32 - CIDR)   
+>Hoeveel valid hosts? '2 tot de macht (hoeveelheid host bits) - 2, oftewel:   
+$valid$ $hosts =$ $2^{(32 - CIDR)} - 2$  
 
 dingetje:
 https://docs.google.com/document/d/1yKjb-4og1OYJi9eASbxUnoo3b4vJ4tG68oRhQd5vfMw/edit
