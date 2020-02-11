@@ -130,6 +130,93 @@ hostbits:||||`____↑↑↑↑`
 >Hoeveel valid hosts? '2 tot de macht (hoeveelheid host bits) - 2, oftewel:   
 $valid$ $hosts =$ $2^{(32 - CIDR)} - 2$  
 
+# private IP's:
+
+Private IP's zijn als volgt: | | | | |
+-:|:-|:-|:-|:-|     
+192.168.0.0 |-| 192.168.255.255|     |(65,536 IP addressen)    
+172.16.0.0| - |172.31.255.255| |(1,048,576 IP addressen)    
+10.0.0.0| - |10.255.255.255| |(16,777,216 IP addressen)    
+
+## __*nog wat internet protocol suite dingetjes*__
+
+TCP = Transmission control protocol
+zorgt voor betrouwbare en ge-error checkde aflevering van een stream van octets
+Is geen datagram oriented protocol
+
+PING gebruikt ICMP
+
+UDP = User Datagram Protocol
+wordt gebruikt om berichten, (Datagrams) door te sturen tussen netwerken.
+Het ondersteunt broadcasting (iets naar de broadcast sturen, dus naar alle hosts
+op het netwerk).
+
+*Network layers?*
+
+network layers is een framework die complexe netwerk interacties begrijpbaarder maakt
+
+je hebt 't OSI model, "OPEN SYSTEM INTERCONNECTION" ontwikkeld door de ISO dingetje, die heeft 7 layers:
+
+ *#* |type layer | voorbeeld |
+ :-|:-|:-
+1: |Fysiek |(kabel weetjewel RJ45)
+2: |Data link |(MAC)
+3: |Netwerk|(IP, Routers)
+4: |Transport|(TCP, UDP, port numbers)
+5: |Session|(Syn/Ack)
+6: |Encryptie|(ASCII, PNG, MIDI)
+7: |Applicatie|(SNMP,HTTP,FTP)
+
+*/// PLEASE DO NOT THROW SAUSAGE PIZZA AWAY ///*
+
+Het OSI-model van hoogste layer (7) naar laagste layer (1) uitgelegd:
+ *#* |type layer | uitleg
+ :-|:-|:-|
+|7. |Application | Waarmee de gebruiker interact. Browsers en andere internet-verbonden apps gebruiken Layer 7 Application protocols. 
+|6. |Presentation | Converteert data naar en van de Applicatie layer, vertaald applicatie formatting naar netwerk formatting enzo.
+|5. |Session| Established en Terminate verbindingen met apparaten. Ook zegt het welke packets bij welke text / image files horen.
+|4. |Transport | Coördineert data tranfers tussen systems en hosts, met error-checking en data recovery
+|3. |Network | Beslist hoe data is verstuurd naar het apparaat, verantwoordelijk voor packet forwarding, routing en adressing.
+|2. |Data link| Vertaald binary naar signalen waar de hogere layers mee kunnen werken.
+|1. |Physical| De daadwerkelijke hardware bevindt zich op deze layer, verzend signalen over media (kabels)
+
+TCP / IP is een nieuwer framework, met 4 layers:
+ *#* |type layer |
+ :-|:-|:-
+1: |Network Access (or link)
+2: |Internet
+3: |Transport (or host to host)
+4: |Application (or process)
+
+*/// NUDE ANAKIN IMPALES TEARFUL ABSENTEES ///*    
+
+Het TCP / IP model (soms *protocol stack* genoemd), kan gezien worden als een compacte versie van het OSI-model\
+
+TCP / IP is een nieuwer framework, met 4 layers:
+ *#* |type layer | uitleg
+ :-|:-|:-
+1: |Network Access| Ook wel *Network Interface layer* genoemd, combineert OSI's L1 en L2.
+2: |Internet| Lijkt op OSI's L3.
+3: |Transport| Ook wel *Host-to-Host layer* genoemd, lijkt op OSI's L4.
+4: |Application| Ook wel *Process layer* genoemd, combineert OSI's L5, L6 & L7.
+
+# wat is DHCP?
+
+DHCP staat voor Dynamic Host Configuration Protocol, het is een netwerk protocol gebruikt in UDP/TP netwerken    
+Het assigned dynamisch een IP adres en andere configuratie parameters voor elk apparaat, zodat ze kunnen communiceren.    
+Als er geen DHCP server is, moet een apparaat handmatig ge-assigned worden. een router heeft een DHCP server die 
+automatisch een IP adres assigned aan elk apparaat dat er aan verbind, deze adressen zijn verbonden.
+--ondersteund door IPv4 en IPv6
+
+# wat is DNS server en DNS protocol?
+DNS  is een hierarchisch systeem dat aan het internet verbonden systemen een naam geeft. Het verbindt verscheidene informatie
+met domein namen, zoals IP adressen aan domeinnamen,het specificeert ook technische functies van de database.
+
+# to do:
+- [ ] Beter inzicht krijgen in de details van UDP & TCP & DHCP
+- [ ] Dingetje aflezen en misschien nog wat youtube filmpjes kijken hahahahahhahahahaha 
+
+
 dingetje:
 https://docs.google.com/document/d/1yKjb-4og1OYJi9eASbxUnoo3b4vJ4tG68oRhQd5vfMw/edit
 
