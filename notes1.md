@@ -214,6 +214,7 @@ met domein namen, zoals IP adressen aan domeinnamen,het specificeert ook technis
 
 # to do:
 - [ ] Beter inzicht krijgen in de details van UDP & TCP & DHCP
+- [ ] het DING
 - [ ] Dingetje aflezen en misschien nog wat youtube filmpjes kijken hahahahahhahahahaha 
 
 
